@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Form</title>
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+</head>
+<body>
+    
+    <div class="header">
+        <h2 class="title">My Django Form</h2>
+        <p>The data entered will be saved in a SQL database.</p>
+    </div>
+
+    <form action="submit" method="POST">
+
+        <input type="text" name="name" id="name" placeholder="Full Name">
+        <input type="tel" name="num" id="num" placeholder="Phone Number">
+        <input type="email" name="mail" id="mail" placeholder="Email">
+        <input type="password" name="pswd" id="pswd" placeholder="Password">
+
+        <div class="radio">
+            <span>Gender:</span>
+            <div class="gender">
+                <label for="male">Male</label>
+                <input type="radio" name="sex" id="male" class="input-btn">
+            </div>
+            <div class="gender">
+                <label for="female">Female</label>
+                <input type="radio" name="sex" id="female" class="input-btn">
+            </div>
+            <div class="gender">
+                <label for="other">Other</label>
+                <input type="radio" name="sex" id="other" class="input-btn">
+            </div>
+        </div>
+        
+        <div class="check">
+            <label for="dev">Developer: </label>
+            <input type="checkbox" name="dev" id="dev" class="input-btn">
+        </div>
+
+        <input type="submit" value="Save" class="form-btn">
+
+    </form>
+
+</body>
+</html>
