@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
 </head>
 <body>
 
-    <h1>Static Files</h1>
-    <img src='{% static "images/django.jpg" %}' alt="IMG">
+    <h1 class="sans-serif" id="title">Static Files</h1>
+    <img src="{% static 'images/django.jpg' %}" alt="IMG">
 </body>
+<script src="{% static 'scripts/script.js' %}"></script>
 </html>

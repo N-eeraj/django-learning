@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(16, 62, 46);
+    color: #DDD;
+    text-align: center;
+}
+
+.sans-serif{
+    font-family: sans-serif;
+}
+
+#title{
+    font-size: 3em;
+    margin-bottom: 10vh;
+}
+
+img{
+    width: 50vw;
+    border: 5px dotted #CCC;
+}
