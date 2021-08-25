@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+{% static "images" as imgURL %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+</head>
+<body>
+    
+    <h1 class="title">Models in Django using Class</h1>
+
+
+    <section class="card-section">
+
+        {% for hero in heros %}
+
+            <div class="card">
+                <img src="{{imgURL}}/{{hero.img}}" alt="{{ hero.name }}" class="banner">
+                <h1 class="card-title">{{hero.name}}</h1>
+                <h2 class="card-title">{{hero.s_name}}</h2>
+                <p>{{ hero.desc }}</p>
+                <button class="card-btn" onclick="showImg('{{hero.img}}')">Show Image</button>
+            </div>
+
+        {% endfor %}
+
+    </section>
+
+    <div class="hidden" id="hidden">
+        <img alt="selected" id="selected" onclick="closeImg()">
+    </div>
+
+</body>
+<script src="{% static 'scripts/index.js' %}"></script>
+</html>
