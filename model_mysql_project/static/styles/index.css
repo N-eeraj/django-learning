@@ -103,7 +103,7 @@ input:focus{
     background-color: rgba(30, 100, 255, 0.75);
     cursor: pointer;
 }
-.form-btn:focus, , button:focus{
+.form-btn:focus, button:focus{
     background-color: #EEE;
     color: rgb(30, 100, 255);
     border: none;

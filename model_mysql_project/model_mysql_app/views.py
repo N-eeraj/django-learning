@@ -1,9 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import FormTable
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    status = request.session.get('status', 404)
+    request.session['status'] = 404
+
+    return render(request, 'index.html', {'status': status})
 
 def save(request):
 
@@ -17,7 +20,8 @@ def save(request):
 
     new_person.save()
 
-    return home(request)
+    request.session['status'] = 200
+    return redirect("/")
 
 def data(request):
     data = FormTable.objects.all()
