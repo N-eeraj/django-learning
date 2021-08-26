@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #EEE;
+}
+
+.header{
+    background-color: rgb(0, 50, 255);
+}
+
+table{
+    width: 100%;
+    margin-top: 3vh;
+    border-collapse: collapse;
+    overflow-x: scroll;
+}
+
+th{
+    padding: 1%;
+    background-color: rgb(0, 50, 255);
+    border:1px solid #EEE;
+    color: #EEE;
+}
+td{
+    width: auto;
+    padding: 1%;
+    border:1px solid rgba(0, 50, 255, 0.7);
+}
+
+@media (min-width: 500px)
+{
+    table{
+        width: 70%;
+    }
+}
+
+@media (min-width: 900px)
+{
+    table{
+        width: 50%;
+    }
+}

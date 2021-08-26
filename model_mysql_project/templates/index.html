@@ -15,26 +15,26 @@
         <p>The data entered will be saved in a SQL database.</p>
     </div>
 
-    <form action="submit" method="POST">
+    <form action="save" method="POST">
+        {% csrf_token %}
 
-        <input type="text" name="name" id="name" placeholder="Full Name">
-        <input type="tel" name="num" id="num" placeholder="Phone Number">
-        <input type="email" name="mail" id="mail" placeholder="Email">
-        <input type="password" name="pswd" id="pswd" placeholder="Password">
+        <input type="text" name="name" id="name" placeholder="Full Name" required>
+        <input type="tel" name="num" id="num" placeholder="Phone Number" required>
+        <input type="email" name="mail" id="mail" placeholder="Email" required>
 
         <div class="radio">
             <span>Gender:</span>
             <div class="gender">
                 <label for="male">Male</label>
-                <input type="radio" name="sex" id="male" class="input-btn">
+                <input type="radio" name="sex" id="male" class="input-btn" value="Male" required>
             </div>
             <div class="gender">
                 <label for="female">Female</label>
-                <input type="radio" name="sex" id="female" class="input-btn">
+                <input type="radio" name="sex" id="female" class="input-btn" value="Female" required>
             </div>
             <div class="gender">
                 <label for="other">Other</label>
-                <input type="radio" name="sex" id="other" class="input-btn">
+                <input type="radio" name="sex" id="other" class="input-btn" value="Others" required>
             </div>
         </div>
         
@@ -46,6 +46,8 @@
         <input type="submit" value="Save" class="form-btn">
 
     </form>
+
+    <button onclick="window.location.href = '/data'">Go to Table</button>
 
 </body>
 </html>

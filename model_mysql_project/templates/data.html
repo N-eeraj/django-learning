@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Data</title>
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/data.css' %}">
+</head>
+<body>
+    
+    <div class="header">
+        <h2 class="title">My Django Form Data</h2>
+        <p>These are the data collected via the form & saved into the database.</p>
+    </div>
+    
+    <table>
+
+        <thead>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Developer</th>
+        </thead>
+
+        {% for row in table %}
+
+            <tr>
+                <td>{{row.name}}</td>
+                <td>{{row.phone}}</td>
+                <td>{{row.mail}}</td>
+                <td>{{row.gender}}</td>
+                <td>{{row.dev}}</td>
+            </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <button onclick="window.location.href = '../'">Go to Form</button>
+
+</body>
+</html>
